@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.cosmic-button {
+  @apply px-8 py-4 bg-purple-600 rounded-full text-xl font-semibold hover:bg-purple-700 transition-colors;
+}
+
+canvas {
+  height: 100vh !important;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: twinkle 2s infinite;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,8 +59,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-body {
-  background-color: #000;
-  color: #fff;
 }
